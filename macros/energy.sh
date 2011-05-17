@@ -1,0 +1,15 @@
+./bin/Linux-g++/UCNb 10 0 0 0 0 > output/10.txt
+./bin/Linux-g++/UCNb 20 0 0 0 0 > output/20.txt
+./bin/Linux-g++/UCNb 30 0 0 0 0 > output/30.txt
+./bin/Linux-g++/UCNb 40 0 0 0 0 > output/40.txt
+./bin/Linux-g++/UCNb 50 0 0 0 0 > output/50.txt
+./bin/Linux-g++/UCNb 60 0 0 0 0 > output/60.txt
+./bin/Linux-g++/UCNb 70 0 0 0 0 > output/70.txt
+./bin/Linux-g++/UCNb 80 0 0 0 0 > output/80.txt
+./bin/Linux-g++/UCNb 90 0 0 0 0 > output/90.txt
+./bin/Linux-g++/UCNb 100 0 0 0 0 > output/100.txt
+./bin/Linux-g++/UCNb 110 0 0 0 0 > output/110.txt
+./bin/Linux-g++/UCNb 120 0 0 0 0 > output/120.txt
+./bin/Linux-g++/UCNb 130 0 0 0 0 > output/130.txt
+./bin/Linux-g++/UCNb 140 0 0 0 0 > output/140.txt
+./bin/Linux-g++/UCNb 150 0 0 0 0 > output/150.txt
