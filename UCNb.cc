@@ -55,8 +55,8 @@ int main(int argc, char** argv)
 	runManager->Initialize();
 	
 	
-	G4cout << "UCNbPrimaryGeneratorActionTemp" << G4endl;
-	runManager->SetUserAction(new UCNbPrimaryGeneratorActionTemp(energy, x, y, z));
+	G4cout << "UCNbIsotropicBetaGeneratorAction" << G4endl;
+	runManager->SetUserAction(new UCNbIsotropicBetaGeneratorAction(energy, x, y, z));
 	
 	G4cout << "UCNbRunAction" << G4endl;
 	UCNbRunAction* runAction = new UCNbRunAction(detector);
@@ -74,13 +74,13 @@ int main(int argc, char** argv)
 	G4cout << "UCNbStackingAction" << G4endl;
 	runManager->SetUserAction(new UCNbStackingAction());
 	
-	/*
+	
 	#ifdef G4VIS_USE
 	  // construct the visualization manager
 	  G4VisManager* visManager = new G4VisExecutive;
 	  visManager->Initialize();
 	#endif		
-	*/
+	
 
 	// execute an argument macro file if it exists
 	// otherwise, start an interactive session
@@ -103,17 +103,17 @@ int main(int argc, char** argv)
 	#ifdef G4UI_USE
 		G4UIExecutive* UI = new G4UIExecutive(argc, argv);
 		UImanager->ApplyCommand("/control/execute vis.mac");
-		// UI->SessionStart();
+		UI->SessionStart();
 		delete UI;
 		// G4cout << "EventAction get hist" << G4endl;
 		// G4cout << eventAction->GetEventNo() << G4endl;
 		
 	#endif
-	/*
+	
 	#ifdef G4VIS_USE
 		delete visManager;
 	#endif
-	*/
+	
 	// terminate the job
 	delete runManager;
 	
