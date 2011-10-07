@@ -51,8 +51,8 @@ void UCNbMaterials::CreateMaterials()
 	aluminum    = nistMan->FindOrBuildMaterial("G4_Al");
 
 	G4double density;
-	G4int ncomponents;
-	G4double fractionmass;
+	// G4int ncomponents;
+	// G4double fractionmass;
 	std::vector<G4int> natoms;
 	std::vector<G4double> fractionMass;
 	std::vector<G4String> elements;

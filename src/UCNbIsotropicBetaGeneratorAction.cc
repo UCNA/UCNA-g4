@@ -1,4 +1,4 @@
-#include "UCNbPrimaryGeneratorActionTemp.hh"
+#include "UCNbIsotropicBetaGeneratorAction.hh"
 
 #include "G4Event.hh"
 #include "G4ParticleGun.hh"

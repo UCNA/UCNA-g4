@@ -1,21 +1,22 @@
 /control/verbose 2
 #/vis/open OGLSXm
-#/vis/open OGLIX
+#/vis/open OGLSQt
+/vis/open OGLIX
 #/vis/open RayTracer
-#/vis/viewer/set/style wireframe
+/vis/viewer/set/style wireframe
 #/vis/viewer/set/style surface
 #/vis/viewer/set/hiddenEdge 1
 #/vis/viewer/set/hiddenMarker 1 # hide trajectory lines, too
-#/vis/drawVolume
-#/vis/viewer/set/viewpointThetaPhi 30 15 deg
-#/vis/viewer/set/projection perspective 30 deg 
-#/vis/viewer/zoom 1
+/vis/drawVolume
+/vis/viewer/set/viewpointThetaPhi 30 15 deg
+/vis/viewer/set/projection perspective 30 deg 
+/vis/viewer/zoom 1
 # coordinate axes:
 #     x-axis:red,  y-axis:green,  z-axis:blue
-#/vis/scene/add/axes            8 -6 -6 1 cm
-#/tracking/storeTrajectory 0
-#/vis/scene/add/trajectories smooth
-#/vis/scene/endOfEventAction accumulate
+/vis/scene/add/axes            8 -6 -6 1 cm
+/tracking/storeTrajectory 0
+/vis/scene/add/trajectories smooth
+/vis/scene/endOfEventAction accumulate
 
-/run/beamOn 260
+/run/beamOn 1
 exit

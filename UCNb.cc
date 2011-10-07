@@ -5,8 +5,7 @@
 
 #include "UCNbDetectorConstruction.hh"
 #include "UCNbPhysicsList.hh"
-#include "UCNbPrimaryGeneratorAction.hh"
-#include "UCNbPrimaryGeneratorActionTemp.hh"
+#include "UCNbIsotropicBetaGeneratorAction.hh"
 
 #include "UCNbRunAction.hh"
 #include "UCNbEventAction.hh"

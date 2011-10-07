@@ -17,7 +17,7 @@
 class G4ParticleGun;
 class G4Event;
 
-class UCNbIsotropicBetaGeneratorAction : public G4UCNbIsotropicBetaGeneratorAction
+class UCNbIsotropicBetaGeneratorAction : public G4VUserPrimaryGeneratorAction
 {
 public:
   UCNbIsotropicBetaGeneratorAction(G4double energy, G4double x, G4double y, G4double z);

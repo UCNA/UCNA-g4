@@ -2,7 +2,7 @@
 # GNUmakefile for UCNb Geant4 simulation.  Chi Feng, Oct 7, 2011
 # --------------------------------------------------------------
 
-name := UCNb-g4
+name := UCNb
 G4TARGET := $(name)
 G4EXLIB := true
 

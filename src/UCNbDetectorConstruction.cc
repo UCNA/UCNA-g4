@@ -43,24 +43,26 @@ UCNbDetectorConstruction::UCNbDetectorConstruction() : physicalWorld(NULL)
 	
 	materials = NULL;
 	
+    // sensitive detector names
 	PMTSDNames[0] = "UCNb/pmtN";
 	PMTSDNames[1] = "UCNb/pmtS";
 	PMTSDNames[2] = "UCNb/pmtE";
 	PMTSDNames[3] = "UCNb/pmtW";
 	PMTSDNames[4] = "UCNb/pmtT";
 	
+	// sensitive detector names
 	PMTSDPVNames[0] = "pmtN"; 
 	PMTSDPVNames[1] = "pmtS"; 
 	PMTSDPVNames[2] = "pmtE"; 
 	PMTSDPVNames[3] = "pmtW"; 
 	PMTSDPVNames[4] = "pmtT"; 
 	
+	// sensitive detector names
 	PMTHCNames[0] = "HitCollectionN";
 	PMTHCNames[1] = "HitCollectionS";
 	PMTHCNames[2] = "HitCollectionE";
 	PMTHCNames[3] = "HitCollectionW";
 	PMTHCNames[4] = "HitCollectionT";
-	
 	
 	numberOfPMTs = 5;
 
@@ -123,11 +125,11 @@ G4VPhysicalVolume* UCNbDetectorConstruction::ConstructDetector()
 	
 	G4double pmtRadius         = 2.54*cm;
 	G4double pmtLength         = 1.0*cm;
-	G4double pmtBevelSize      = 0.25 * 2.54 * cm;	
+	G4double pmtBevelSize      = 0.25 * 2.54*cm;	
 	G4double pmtReflectivity   = 0.1;
 	G4double pmtEfficiency     = 0.9;
 	
-	G4double bottomHoleRadius = 0.5 * 0.505 * 2.54 * cm;
+	G4double bottomHoleRadius = 0.5 * 0.505 * 2.54*cm;
 	
 	G4double scintReflectivity = 0.2;
 	// G4double scintEfficiency   = 0.0;
@@ -156,7 +158,6 @@ G4VPhysicalVolume* UCNbDetectorConstruction::ConstructDetector()
 		rPmts[2] = rEast;
 		rPmts[3] = rWest;
 		rPmts[4] = rTop;
-		
 		
 	G4double holeDist = (refleOuterZ - refleThickness / 2.0);
 	G4double pmtDist = (scintOuterZ + pmtLength);
@@ -274,7 +275,7 @@ G4VPhysicalVolume* UCNbDetectorConstruction::ConstructDetector()
 	G4PVPlacement* pScint    = new G4PVPlacement(rScint, tScint, lScint, "scintillator", lWorld, false, 0);
 	G4PVPlacement* pRefle    = new G4PVPlacement(rRefle, tRefle, lRefle, "reflector", lWorld, false, 0);
 	G4PVPlacement* pInterior = new G4PVPlacement(rInterior, tInterior, lInterior, "interior", lWorld, false, 0);
-	G4PVPlacement* pPmts[numberOfPMTs];
+	G4PVPlacement* pPmts[5];
 	for (G4int i = 0; i < numberOfPMTs; i++) {	
 		 pPmts[i] = new G4PVPlacement(rPmts[i], tPmts[i], lPmts[i], PMTSDPVNames[i], lWorld, false, 0);
 	}
@@ -356,7 +357,7 @@ void UCNbDetectorConstruction::UpdateGeometry() {
 	G4LogicalSkinSurface::CleanSurfaceTable();
 	G4LogicalBorderSurface::CleanSurfaceTable();
 
-	//define new one
+	// define new one
 	// UpdateGeometryParameters();
 
 	G4RunManager::GetRunManager()->DefineWorldVolume(ConstructDetector());

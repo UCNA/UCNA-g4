@@ -12,7 +12,7 @@
 #include "UCNbEventAction.hh"
 #include "UCNbSteppingAction.hh"
 
-#include "UCNbPrimaryGeneratorActionTemp.hh"
+#include "UCNbIsotropicBetaGeneratorAction.hh"
 
 #include "Randomize.hh"
 
@@ -125,7 +125,7 @@ void UCNbEventAction::EndOfEventAction(const G4Event* event)
 			//G4cout << "" << G4endl;
 		}
 	}
-	G4ThreeVector p = UCNbPrimaryGeneratorActionTemp::initMomentum;
+	G4ThreeVector p = UCNbIsotropicBetaGeneratorAction::initMomentum;
 	G4int* hits = UCNbSteppingAction::getDetectorHits();
 	G4cout << "UCNb_event " << hits[0] << " " << hits[1] << " " << hits[2] << " " << hits[3] << " " << hits[4] << " "
 		<< p.x() << " " << p.y() << " " << p.z() << G4endl;
